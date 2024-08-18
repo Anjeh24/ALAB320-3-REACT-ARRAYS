@@ -84,7 +84,6 @@ function App() {
   
  // console.log
  
-  
 
 
   return (
@@ -95,14 +94,16 @@ function App() {
 
     {learners.map((item, index) =>(
       <div key={index}>
-        <div>Name: {item.name + ';  Biography:  ' + item.bio}</div>
-        <div>SCORE: {item.scores.score}</div>
-
-      </div>
+        <div><h3>Name:</h3> {item.name +  ';  Biography:  ' + item.bio}</div>
+        <div><ul>SCORE: {item.scores.map((sub) => <li>{sub.score}</li>
+         )}</ul></div>
+        </div>
+        
+       
 
     ))}
    
-    
+   
     </>
   )
 }
